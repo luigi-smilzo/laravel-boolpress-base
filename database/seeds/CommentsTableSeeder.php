@@ -16,7 +16,7 @@ class CommentsTableSeeder extends Seeder
     {
         $posts = Post::all();
 
-        for ($i = 0; $i < 6; $i++)
+        for ($i = 0; $i < 50; $i++)
         {
             $newComment = new Comment();
             
