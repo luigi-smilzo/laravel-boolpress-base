@@ -10,7 +10,7 @@
                 <h4>Author: {{ $post->user['name'] }}</h4>
                 <h4>Last edited: {{ $post->updated_at }}</h4>
                 <p>{{ $post->content }}</p>
-                <a href="{{ route('posts.show', $post->id) }}">Read more...></a>
+                <a href="{{ route('posts.show', $post->slug) }}">Read more...></a>
             </div>
 
         </article>
