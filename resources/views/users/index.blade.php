@@ -6,10 +6,10 @@
     @foreach($users as $user)
         <div>
             <img src="{{ $user->info['avatar'] }}" alt="">
-            <h4>{{ $user->name }}</h4>
-            <h4>{{ $user->email }}</h4>
-            <h4>{{ $user->info['phone'] }}</h4>
-            <h4>{{ $user->info['address'] }}</h4>
+            <h5>{{ $user->name }}</h5>
+            <span class="d-block">{{ $user->email }}</span>
+            <span class="d-block">{{ $user->info['phone'] }}</span>
+            <span class="d-block">{{ $user->info['address'] }}</span>
         </div>
         @if (!$loop->last)
             <hr>
