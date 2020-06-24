@@ -14,15 +14,17 @@ class CreatePostTagTable extends Migration
     public function up()
     {
         Schema::create('post_tag', function (Blueprint $table) {
-            $table->foreignId('post_id')->onDelete('cascade');
+            $table->foreignId('post_id');
             $table->foreign('post_id')
                 ->references('id')
-                ->on('posts');
+                ->on('posts')
+                ->onDelete('cascade');
 
-            $table->foreignId('tags_id')->onDelete('cascade');
-            $table->foreign('tags_id')
+            $table->foreignId('tag_id');
+            $table->foreign('tag_id')
                 ->references('id')
-                ->on('tags');
+                ->on('tags')
+                ->onDelete('cascade');
         });
     }
 
